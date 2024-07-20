@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/linuxbrew/pin-3.28-98749-g6643ecee5-gcc-linux/source/tools/BinPRE/Analyzer/config')
+sys.path.append('/home/linuxbrew/BinPRE/Analyzer/config')
 import config
 
 Syntax_Groundtruth = config.Syntax_Groundtruth

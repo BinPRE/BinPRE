@@ -13,7 +13,7 @@ BinPRE
        |--- Speculator.py:                    The main module of our Semanic Inference
        |--- Corrector.py:                     The main module of our Semantic Refinement
        |
-       |--- Baseline:  
+       |--- Baseline:                   The re-implementations of the other three ExeT-based baselines.
           |
           |--- Polyglot     The modules of Polyglot
           |--- AutoFormat   The modules of AutoFormat
@@ -21,7 +21,7 @@ BinPRE
 
    |--- src:                            The Taint Tracker for monitoring server execution.
    |
-   |--- BinPRE_Res:                     The the other three ExeT-based baselines.
+   |--- BinPRE_Res:                     The folder of outputs.
        |
        |--- {protocol}_{msgnum} 
           |
@@ -95,9 +95,67 @@ python3 fsend_split.py modbus 0 0 bo xx big 0
 
 ```
 
+## =====A road map for evaluation=====
+
+(Important Tips: When an error is reported, please check the hints in the scripts.)
+
+```
+BinPRE
+   |
+   |--- Artifact_Evaluation:                  Enter into this folder for Artifact Evaluation
+       |
+       |--- BinPRE_scripts             A series of scripts used to run BinPRE.
+       |--- ExeT-based_scripts         A series of scripts used to run Polyglot, AutoFormat, and Tupni.
+       |--- Optional_install          (Optional) A series of scripts used to install all the server used in our experiments.
+       |
+   |
+   |--- BinPRE_Res:                     The folder of outputs.
+       |
+       |--- {protocol}_{msgnum} 
+          |
+          |--- {protocol}_{msgnum}_eval.txt      The results of BinPRE
+          |--- {protocol}_{msgnum}_bo_eval.txt   The results of the other three ExeT-based baselines. 
+```
+**Quick Start: Use modbus as an Example**
+
+step1: start server
+```
+cd ./BinPRE/Artifact_Evaluation/BinPRE_scripts
+./run_modbus_server.sh
+```
+
+step2: run BinPRE
+```
+cd ./BinPRE/Artifact_Evaluation/BinPRE_scripts
+./run_modbus_client.sh
+```
+
+step3: check results in './BinPRE/BinPRE_Res/modbus_50'
 
 
+**(Optinal)Please pay attention to the tips in the script. **
 
+step0: install other server
+
+```
+cd ./BinPRE/Artifact_Evaluation/Optional_install
+./install_<protocol>.sh
+```
+
+
+step1: start server
+```
+cd ./BinPRE/Artifact_Evaluation/BinPRE_scripts
+./run_<protocol>_server.sh
+```
+
+step2: run BinPRE
+```
+cd ./BinPRE/Artifact_Evaluation/BinPRE_scripts
+./run_<protocol>_client.sh
+```
+
+step3: check results in './BinPRE/BinPRE_Res/(protocol)_50'
 
 
 

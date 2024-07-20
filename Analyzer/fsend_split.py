@@ -528,12 +528,6 @@ def MonitorAnalysis(index: int, payload_message:list):
         
 def main():
     start_time = time.time()
-    if config.evaluation_mode == "oa":
-        with open(config.Evaluation_Res, 'w') as f:
-            f.truncate()
-    if config.evaluation_mode == "bo":
-        with open(config.Evaluation_bo_Res, 'w') as f:
-            f.truncate()
 
     index,payload_message = SendInputMsg()
 

@@ -43,8 +43,9 @@ python3.8
 cd ~
 git clone https://github.com/BinPRE/BinPRE
 cd BinPRE
-install_preliminary.sh
-install_pin.sh
+git checkout Artifact_Evaluation
+./install_preliminary.sh
+./install_pin.sh
 cd ..
 ```
 

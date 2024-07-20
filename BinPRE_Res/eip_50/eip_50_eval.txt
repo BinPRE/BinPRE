@@ -1,0 +1,137 @@
+
+Evaluation Part For BinPRE---------------------------------
+Average_Accr:0.9622068965517242
+Average_Pre:1.0
+Average_Rec:0.8769841269841266
+F1_score:0.9344608879492599
+Average_Perf:0.7190476190476189
+******************
+Under_Seg:50
+Over_Seg:0
+handle_unused's Over_Seg:340
+Error_Handled_Unused_Under_Seg:10
+
+
+\Semantic-Type Evaluation Part For BinPRE(no validation)---------------------------------
+no_Average_Pre:0.5916483516483522
+no_Average_Rec:0.7621212121212121
+no_F1_score:0.6661514204119187
+
+no_static_Pre:0.6111111111111112
+no_static_Rec:0.55
+no_static_F1:0.5789473684210527
+no_static_groudtruth:{'26,27', '24,25,26,27', '28,29', '20,21,22,23', '8,9,10,11', '32,33', '4,5,6,7'}
+
+no_integer_Pre:0.5
+no_integer_Rec:0.8571428571428571
+no_integer_F1:0.631578947368421
+no_integer_groudtruth:{'30,31', '2,3', '34,35'}
+
+no_group_Pre:0.45454545454545453
+no_group_Rec:0.7142857142857143
+no_group_F1:0.5555555555555556
+no_group_groudtruth:{'0,1', '24,25'}
+
+no_bytes_Pre:0
+no_bytes_Rec:0.0
+no_bytes_F1:0
+no_bytes_groudtruth:{'12,13', '14,15,16,17,18,19', '12,13,14,15,16,17,18,19'}
+
+no_string_Pre:0
+no_string_Rec:0
+no_string_F1:0
+no_string_groudtruth:set()
+
+
+\Semantic-Type Evaluation Part For BinPRE(Validated)---------------------------------
+Average_Pre:0.7341758241758244
+Average_Rec:0.8969696969696972
+F1_score:0.8074490693767062
+
+static_Pre:0.6111111111111112
+static_Rec:0.55
+static_F1:0.5789473684210527
+static_groudtruth:{'26,27', '24,25,26,27', '28,29', '20,21,22,23', '8,9,10,11', '32,33', '4,5,6,7'}
+
+integer_Pre:0.8571428571428571
+integer_Rec:0.8571428571428571
+integer_F1:0.8571428571428571
+integer_groudtruth:{'30,31', '2,3', '34,35'}
+
+group_Pre:0.45454545454545453
+group_Rec:0.7142857142857143
+group_F1:0.5555555555555556
+group_groudtruth:{'0,1', '24,25'}
+
+bytes_Pre:0.8
+bytes_Rec:0.6666666666666666
+bytes_F1:0.7272727272727272
+bytes_groudtruth:{'12,13', '14,15,16,17,18,19', '12,13,14,15,16,17,18,19'}
+
+string_Pre:0
+string_Rec:0
+string_F1:0
+string_groudtruth:set()
+
+
+\Semantic-Function Evaluation Part For BinPRE(no validation)---------------------------------
+Average_Pre:0.4577777777777776
+Average_Rec:1.0
+F1_score:0.6280487804878048
+
+no_BinPRE_Command_pre:0.5
+no_BinPRE_Command_rec:1.0
+no_BinPRE_Command_F1:0.6666666666666666
+
+
+no_BinPRE_Command_pre:0.5
+no_BinPRE_Command_rec:1.0
+no_BinPRE_Command_F1:0.6666666666666666
+
+no_BinPRE_Length_pre:0.5
+no_BinPRE_Length_rec:1.0
+no_BinPRE_Length_F1:0.6666666666666666
+
+no_BinPRE_Delim_pre:0
+no_BinPRE_Delim_rec:0
+no_BinPRE_Delim_F1:0
+no_delim_groudtruth:set()
+
+no_BinPRE_aligned_pre:0.0
+no_BinPRE_aligned_rec:0
+no_BinPRE_aligned_F1:0
+no_aligned_groudtruth:set()
+
+no_BinPRE_filename_pre:0
+no_BinPRE_filename_rec:0
+no_BinPRE_filename_F1:0
+no_filename_groudtruth:set()
+
+
+\Semantic-Function Evaluation Part For BinPRE(Validated)---------------------------------
+Average_Pre:1.0
+Average_Rec:1.0
+F1_score:1.0
+
+BinPRE_Command_pre:1.0
+BinPRE_Command_rec:1.0
+BinPRE_Command_F1:1.0
+
+BinPRE_Length_pre:1.0
+BinPRE_Length_rec:1.0
+BinPRE_Length_F1:1.0
+
+BinPRE_Delim_pre:0
+BinPRE_Delim_rec:0
+BinPRE_Delim_F1:0
+delim_groudtruth:set()
+
+BinPRE_aligned_pre:0
+BinPRE_aligned_rec:0
+BinPRE_aligned_F1:0
+aligned_groudtruth:set()
+
+BinPRE_filename_pre:0
+BinPRE_filename_rec:0
+BinPRE_filename_F1:0
+filename_groudtruth:set()

@@ -59,13 +59,13 @@ serverArgs = "e"
 defaultCommand = '0,1'
 
 
-PUT_test = f'{pin_dir}/{ToolName}/PUT_test'
-info_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/info.txt'
-format_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/format.txt'
-data_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/data.txt'
-debug_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/debug.txt'
-loops_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/loops.txt'
-verbose_file_path = f'{pin_dir}/{ToolName}/PUT_test/tmp_results/verbose.txt'
+PUT_test = f'../PUT_test'
+info_file_path = f'../PUT_test/tmp_results/info.txt'
+format_file_path = f'../PUT_test/tmp_results/format.txt'
+data_file_path = f'../PUT_test/tmp_results/data.txt'
+debug_file_path = f'../PUT_test/tmp_results/debug.txt'
+loops_file_path = f'../PUT_test/tmp_results/loops.txt'
+verbose_file_path = f'../PUT_test/tmp_results/verbose.txt'
 
 
 black_operators = ['mov','movzx','cmp']

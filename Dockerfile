@@ -44,7 +44,46 @@ RUN cd ~/BinPRE/src && \
     make && \
     cd src 
 
+# #dnp3.0 
+RUN cd ~/BinPRE/src && \
+    git clone --recursive https://github.com/automatak/dnp3.git && \
+    mv dnp3 automatak && cd automatak && \
+    mkdir build && cd build && \
+    cmake .. && sudo make install && \
+    cd ../cpp/examples/outstation/ && \
+    sed -i 's/"0.0.0.0", 20000/"127.0.0.1", 4999/g' main.cpp && \
+    cmake . && \
+    make && \
+    LD_LIBRARY_PATH=/usr/lib/libopendnp3.so && \
+    LD_LIBRARY_PATH=/usr/lib/libopendnp3.so:$LD_LIBRARY_PATH && \
+    sudo chmod 777 /etc/ld.so.conf && \
+    sudo echo "/usr/lib/libopendnp3.so" >> /etc/ld.so.conf && \
+    sudo ldconfig
 
-RUN cd ~/BinPRE/ && \
-    chmod 777 -R ./
+
+#ftp
+RUN cd ~/BinPRE/src && \
+    sudo apt install -y build-essential && \
+    sudo apt install -y gnutls-dev && \
+    git clone https://github.com/hfiref0x/LightFTP.git && \
+    cd LightFTP/Source/Release && \
+    cp ~/BinPRE/Artifact_Evaluation/Optional_install/fftp.conf ./ && \
+    make && \
+    cp ~/BinPRE/Artifact_Evaluation/Optional_install/fftp ./
+
+
+#tftp
+RUN sudo apt-get install -y autoconf && \
+    sudo apt-get install -y vim && \
+    sudo apt-get install -y tftpd-hpa && \
+    sudo cp ~/BinPRE/Artifact_Evaluation/Optional_install/in.tftpd /usr/sbin/ && \
+    sudo mkdir /var/lib/tftpboot && \
+    sudo chmod 777 -R /var/lib/tftpboot && \
+    sudo chmod 777 -R /usr/sbin/in.tftpd && \
+    sudo pip3 install -r ~/BinPRE/requirements.txt
+
+
+RUN sudo chmod 777 -R ~/BinPRE/
+
+
 

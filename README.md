@@ -98,6 +98,7 @@ BinPRE
 ### Quick Build with Dockerfile (Recommend)
 
 ```
+docker pull homebrew/ubuntu20.04
 docker build . -t binpre_ae
 docker run -it --privileged binpre_ae /bin/bash
 ```

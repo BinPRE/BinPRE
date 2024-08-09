@@ -1,6 +1,6 @@
 cd ../../Analyzer
 #wait server start: 1min
-sleep 120
+sleep 60
 
 python3 fsend_split.py dns 0 1 oa index big 0
 #wait and enter threadId: 0

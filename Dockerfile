@@ -44,7 +44,10 @@ RUN cd ~/BinPRE/src && \
     make && \
     cd src 
 
-# #dnp3.0 
+# NEW!! You are welcome to install and try other servers with the following instructions.
+
+
+#dnp3.0 
 RUN cd ~/BinPRE/src && \
     git clone --recursive https://github.com/automatak/dnp3.git && \
     mv dnp3 automatak && cd automatak && \
@@ -92,8 +95,16 @@ RUN cd ~/BinPRE/src && \
     sudo cp ~/BinPRE/Artifact_Evaluation/Optional_install/snap7-full-1.2.1/libsnap7.so /usr/lib/libsnap7.so && \
     sudo chmod 777 -R /usr/lib/libsnap7.so && \
     sudo chmod 777 -R ~/BinPRE/src/snap7-full-1.2.1
-    
-
+   
+# #http
+# RUN cd ~/BinPRE/src && \
+#     git clone https://github.com/avih/miniweb.git && \
+#     cd miniweb && \
+#     sed -i '/CFLAGS+= -DHAS_POSIX_TIMERS/aCFLAGS += -DENABLE_DTSP' Makefile && \
+#     make && \
+#     sudo cp ~/BinPRE/Artifact_Evaluation/Optional_install/miniweb /home/linuxbrew/BinPRE/src/miniweb/miniweb && \
+#     sudo chmod 777 -R ~/BinPRE/src/miniweb && \
+#     sudo chmod 777 -R ~/BinPRE/ && \
 
 RUN sudo chmod 777 -R ~/BinPRE/
 

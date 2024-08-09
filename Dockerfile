@@ -82,6 +82,18 @@ RUN sudo apt-get install -y autoconf && \
     sudo chmod 777 -R /usr/sbin/in.tftpd && \
     sudo pip3 install -r ~/BinPRE/requirements.txt
 
+#s7 
+
+RUN cd ~/BinPRE/src && \
+    wget http://sourceforge.net/projects/snap7/files/1.2.1/snap7-full-1.2.1.tar.gz && \
+    tar -zxvf snap7-full-1.2.1.tar.gz && cd snap7-full-1.2.1 && \
+    cd build/unix && make -f x86_64_linux.mk all && \
+    sudo cp ~/BinPRE/Artifact_Evaluation/Optional_install/snap7-full-1.2.1/server /home/linuxbrew/BinPRE/src/snap7-full-1.2.1/examples/cpp/x86_64-linux/server && \
+    sudo cp ~/BinPRE/Artifact_Evaluation/Optional_install/snap7-full-1.2.1/libsnap7.so /usr/lib/libsnap7.so && \
+    sudo chmod 777 -R /usr/lib/libsnap7.so && \
+    sudo chmod 777 -R ~/BinPRE/src/snap7-full-1.2.1
+    
+
 
 RUN sudo chmod 777 -R ~/BinPRE/
 
